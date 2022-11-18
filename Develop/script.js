@@ -4,6 +4,7 @@
 
 //var todaydate = daysjs();
 //$("#currentDay").text(todaydate.format("MMMM Do, YYYY"));
+
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
@@ -29,9 +30,11 @@ var savebtns = $(".saveBtn");
 
 for (var btn of savebtns) {
   $(btn).click(function (event) {
-    var target = event.target;
-    var parent = $(target).parent();
-    var text = $(parent).find(".description");
-    console.log(text);
+    var text = $(this).siblings("textarea").val();
+    var hour = $(this).siblings("textarea").data("hour");
+    var stringHour = hour.toString();
+    console.log(stringHour, hour);
+
+    localStorage.setItem(stringHour, text);
   });
 }
