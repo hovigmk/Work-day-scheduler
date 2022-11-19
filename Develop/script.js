@@ -2,8 +2,6 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 
-//var todayDate = moment().format("dddd, MMM Do YYYY");
-//$("#currentDay").html(todayDate);
 //$(document).ready(function () {
 //for (var i = 9; i < 18; i++) {}
 //});
