@@ -31,10 +31,9 @@ var savebtns = $(".saveBtn");
 for (var btn of savebtns) {
   $(btn).click(function (event) {
     var text = $(this).siblings("textarea").val();
-    var hour = $(this).siblings("textarea").data("hour");
-    var stringHour = hour.toString();
-    console.log(stringHour, hour);
+    var hour = $(this).parent().attr("id");
+    console.log(hour, text);
 
-    localStorage.setItem(stringHour, text);
+    localStorage.setItem(hour, text);
   });
 }
