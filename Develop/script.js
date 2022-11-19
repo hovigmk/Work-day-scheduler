@@ -2,9 +2,13 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 
-//var todaydate = daysjs();
-//$("#currentDay").text(todaydate.format("MMMM Do, YYYY"));
-
+//var todayDate = moment().format("dddd, MMM Do YYYY");
+//$("#currentDay").html(todayDate);
+//$(document).ready(function () {
+//for (var i = 9; i < 18; i++) {}
+//});
+var today = dayjs();
+$("#currentDay").text(today.format("MMM D, YYYY"));
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
