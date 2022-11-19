@@ -14,17 +14,17 @@ $(document).ready(function () {
 
       // To check the time and add the classes for background colours
       if (timeblock < currenthour) {
-        $(".description").removeClass("future");
-        $(".description").removeClass("present");
-        $(".description").addClass("past");
+        $(this).removeClass("future");
+        $(this).removeClass("present");
+        $(this).addClass("past");
       } else if (timeblock === currenthour) {
-        $(".description").removeClass("past");
-        $(".description").removeClass("future");
-        $(".description").addClass("present");
+        $(this).removeClass("past");
+        $(this).removeClass("future");
+        $(this).addClass("present");
       } else {
-        $(".description").removeClass("present");
-        $(".description").removeClass("past");
-        $(".description").addClass("future");
+        $(this).removeClass("present");
+        $(this).removeClass("past");
+        $(this).addClass("future");
       }
     });
   }
